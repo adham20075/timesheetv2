@@ -1,0 +1,47 @@
+{
+  "name": "mastec-timesheet-system",
+  "version": "1.0.0",
+  "description": "MasTec Advanced Timesheet Management System for Henkels West Controls",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "npm run lint && npm run typecheck && rollup -c",
+    "dev": "rollup -c -w",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:e2e": "playwright test",
+    "lint": "eslint src/**/*.js --fix",
+    "typecheck": "tsc --noEmit",
+    "serve": "http-server dist -p 8080 -o",
+    "start": "npm run serve",
+    "clean": "rimraf dist",
+    "format": "prettier --write \"src/**/*.{js,html,css}\"",
+    "validate": "npm run lint && npm run typecheck && npm run test"
+  },
+  "keywords": ["timesheet", "mastec", "henkels-west", "enterprise", "time-tracking"],
+  "author": "MasTec Development Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-html": "^1.0.2",
+    "@rollup/plugin-json": "^6.0.1",
+    "@playwright/test": "^1.40.1",
+    "eslint": "^8.57.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "typescript": "^5.3.3",
+    "http-server": "^14.1.1",
+    "rollup": "^4.9.6",
+    "rimraf": "^5.0.5",
+    "prettier": "^3.1.1"
+  },
+  "dependencies": {
+    "@libsql/client": "^0.4.3"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

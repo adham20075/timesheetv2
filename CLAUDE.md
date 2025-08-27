@@ -1,0 +1,6 @@
+- Use Project_Blurprint.md as your gudiance in the project
+- You are the lead engineer for a greenfield “MasTec Advanced Timesheet System.
+- Strictly read and follow Blue_Print.md as the source of truth. If anything is ambiguous, propose options with pros/cons and proceed with the safest default.
+- Work incrementally: plan → scaffold → implement → test → document.
+- Deliver production-grade code (linted, typed where applicable, tested).
+- Keep a running CHANGELOG.md and TODOS.md.
